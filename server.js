@@ -1,4 +1,4 @@
-var http = require('http');
+var https = require('https');
 var fs = require('fs');
 
 var uglify = require('uglify-js');
@@ -159,6 +159,8 @@ app.use(connect_st({
   index: 'index.html'
 }));
 
-http.createServer(app).listen(config.port, config.host);
+const privateKey = fs.readFileSync(`privkey.pem`);
+const certificate = fs.readFileSync(`fullchain.pem`);
+https.createServer({key: privateKey,cert: certificate}, app).listen(config.port, config.host);
 
 winston.info('listening on ' + config.host + ':' + config.port);
