@@ -1,5 +1,8 @@
 # Haste
 
+**Please note that this is a fork of [seejohnrun/haste-server](https://github.com/seejohnrun/haste-server)**
+Almost all of this code is _not_ by me!
+
 Sharing code is a good thing, and it should be _really_ easy to do it.
 A lot of times, I want to show you something I'm seeing - and that's where we
 use pastebins.
